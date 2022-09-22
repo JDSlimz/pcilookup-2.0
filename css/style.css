@@ -1,0 +1,172 @@
+html {
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+    color: #444444;
+    background-color: #EEEEEE;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 80%;
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-attachment: fixed;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+#page {
+    min-height: 100vh;
+    background-color: rgba(255,255,255,0.9);
+    width: 80%;
+    margin: 0px auto;
+}
+
+#header {
+    padding: 6px;
+    text-align: center;
+}
+
+.header {
+    color: #362aa7;
+}
+
+#logo {
+    width: 50%;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-item {
+    font-size: large;
+    border: 2px solid #362aa7;
+    flex: 1;
+    padding: 15px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.active {
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: #362aa7;
+}
+
+#content {
+    padding: 4px 0 24px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+#headerWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.column, .field, .label {
+    text-align: center;
+}
+
+#searchWrapper {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#searchWrapper .button {
+    margin-top: 5px;
+}
+
+#searchForm .field {
+    width: 33%;
+    margin: 10px auto;
+}
+
+#ven, #dev {
+    width: 100%;
+}
+
+.autoComplete_wrapper {
+    width: 100%;
+}
+  
+
+#submit, #list{
+    width: 33%;
+    margin: 20px auto;
+}
+
+#browseWrapper {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#footer {
+    color: #666666;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer img {
+    max-height: 50px;
+}
+
+#footer a {
+    color: #999999;
+}
+
+/*Results Section*/
+.gridjs-table{
+    width: 100%;
+}
+
+/*Support Us Section*/
+
+/*Help Dialog*/
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        background-position-x: center;
+    }
+
+    #page {
+        width: 80%;
+    }
+
+    #submit, #list {
+        width: 50%;
+    }
+
+}

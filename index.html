@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>PCI Lookup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.02.min.css">
+    <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div id="page">
+        <div id="header" class="header">
+            <img id="logo" src="img/logo.png" />
+            <div id="menu">
+                <ul>
+                    <li class="menu-item active">Home</li>
+                    <li class="menu-item">Support Us</li>
+                    <li class="menu-item" onclick="$('#helpModal').addClass('is-active');">Help!</li>
+                </ul>
+            </div>
+        </div>
+        <!--Search Form-->
+        <div id="searchForm" class="columns">
+            <div class="column">
+                <div class="field">
+                    <div class="field-label is-medium">
+                        <label class="label">Vendor</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <input id="ven" name="ven" placeholder="e.g. 10de or Nvidia" class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-label is-medium">
+                        <label class="label">Device</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <input id="dev" name="dev" placeholder="e.g. 010b or 1080 TI" class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Submit Button-->
+                <button id="submit" onclick="search()" type="button"
+                    class="button is-success">Submit</button>
+
+                <h2 id="or" class="title is-2"> - OR - </h2>
+                <button id="list" class="button is-info is-fullwidth" onclick="listAll()">List All Devices</a>
+            </div>
+        </div>
+        
+        <!--Results Table-->
+        <div id="results">
+            <div id="resultsTable" style="width:100%;"></div>
+        </div>
+
+        <!--Individual Item-->
+
+        <!--Support Us-->
+        
+        <div id="footer">
+            <a href="https://discord.gg/HmAjwGXrC8"><img src="/img/discord.png"></a>
+            <a href="https://www.patreon.com/bePatron?u=27364628" data-patreon-widget-type="become-patron-button">Become
+                a Patron!</a>
+            <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+            <a href="https://merch.pcilookup.com">
+                <h2>Buy Our Merch!</h2>
+            </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+<div id="helpModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">How to use PCILookup</p>
+        <button onclick="$('#helpModal').removeClass('is-active');" class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="tabs">
+            <ul>
+              <li class="is-active"><a>Windows</a></li>
+              <li><a>Linux</a></li>
+            </ul>
+          </div>
+      </section>
+    </div>
+  </div>
+
+</html>
